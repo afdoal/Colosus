@@ -1,5 +1,9 @@
 <?php
 global $db;
+
+
+
+
 class Header{
     
     /* fungsi untuk menampilkan menu */
@@ -60,5 +64,19 @@ class Database{
 
 /* declare class dbase */
 $dbase = new Database();
+
+function cekLevel($username,$modul){
+        global $db;
+        $sql = "SELECT * from user as u, modul as m, leveluser as l WHERE u.uname='$username' AND m.link = '?module=$modul' AND u.idLevelUser = l.idLevelUser AND l.idLevelUser = m.idLevelUser LIMIT 1";
+        $prepare = $db->query($sql);
+        $return = $prepare->fetchColumn();
+        
+        if($return>0){
+            return true;
+        }else{
+            return false;
+        }
+        
+}
 
 ?>

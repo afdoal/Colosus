@@ -1,4 +1,28 @@
 <!-- masukan semua css disini -->
+<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
+	<style type="text/css">
+		#fm{
+			margin:0;
+			padding:10px 30px;
+		}
+		.ftitle{
+			font-size:14px;
+			font-weight:bold;
+			color:#666;
+			padding:5px 0;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.fitem{
+			margin-bottom:5px;
+		}
+		.fitem label{
+			display:inline-block;
+			width:190px;
+		}
+	</style>
 <style>
 body {
 	margin:0;
@@ -13,8 +37,8 @@ body {
 	height:80px;
 }
 .head .main {
-	width:90%;
-	margin:0 auto;
+	width:99%;
+	margin:-19px auto;
 	position:relative;
 }
 #browse {
@@ -22,6 +46,7 @@ body {
 	right:77px;
 	top:20px;
 	cursor:pointer;
+        z-index:99;
         
 }
 .container {
@@ -29,7 +54,30 @@ body {
 	background-image:url('../image/main_bg.png');
 	background-repeat:repeat-y;
         background-repeat: repeat-x;
-	height:700px;
+	height:50px;
+        
+        
+}
+.wrapper{
+    width:100%;
+    margin:0 auto;
+    
+}
+
+.footer{
+     background-image:url('../image/footer.png');
+	background-repeat:repeat-y;
+        background-repeat: repeat-x;
+      text-align: center;
+      color:white;
+     font-size:10px;
+     position: fixed;
+     bottom: 0px;
+     margin-bottom: -10px;
+     left: 0px;
+     border-radius:15px;
+     width: 100%;
+     height: 42px
 }
 .content {
 	width:99%;
@@ -49,12 +97,15 @@ li a {
 	display:block;
 	color:#333;
 	padding:8px;
+        text-decoration: none;
 }
 li a:hover {
 	background-color:#000;
 	color:#fff;
 }
 .categories {
+        z-index:98;
+        position: fixed;
 	display:none;
 	padding:10px;
 	float:left;
@@ -68,7 +119,7 @@ li a:hover {
 }
 #logo{
     float:left;
-    margin-right:40px;
+    margin-right:20px;
 }
 #keterangan{
     
@@ -145,5 +196,29 @@ li a:hover {
 
 .clear {
 	clear:both;
+}
+
+.clock {width:167px;border:6px solid black;border-radius: 10px; float:left;margin-top:4px;margin-right:3px; color:#fff;padding: 4px 4px 4px 4px; ; background: -webkit-linear-gradient(black, gray);}
+
+#Date { font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; text-shadow:0 0 5px #00c6ff; }
+
+#uljam { margin:0 auto; padding:0px; list-style:none; text-align:center; }
+#uljam li { width:20px;display:inline;margin:0 auto; font-size:30px; text-align:center; font-family:'BebasNeueRegular', Arial, Helvetica, sans-serif; text-shadow:0 0 5px #00c6ff; }
+
+#point { position:relative; -moz-animation:mymove 1s ease infinite; -webkit-animation:mymove 1s ease infinite; padding-left:10px; padding-right:10px; }
+
+/* Simple Animation */
+@-webkit-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }	
+}
+
+@-moz-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }	
 }
 </style>

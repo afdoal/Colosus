@@ -3,6 +3,10 @@
  * ambil semua file penting
  */
 session_start();
+if(empty($_SESSION[uname])){
+      /* Redirect ke halaman home */ 
+           header('location:../');
+    }
 include '../core/config.php';
 include '../core/class.php';
 include 'header.php';

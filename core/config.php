@@ -9,4 +9,6 @@ $dbname = 'colosus'; //nama Database
 /* Initialisasi database */
 $db = new PDO('mysql:host=localhost;dbname='.$dbname, $uname, $pwd);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
+define ('BASE_URL','http://'.$_SERVER['SERVER_NAME'].'/');
 ?>
